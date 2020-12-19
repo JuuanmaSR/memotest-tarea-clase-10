@@ -1,0 +1,22 @@
+{
+  "name": "memotest-tarea-clase-10",
+  "version": "1.0.0",
+  "description": "Tarea clase 10, hacer un memotest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuuanmaSR/memotest-tarea-clase-10.git"
+  },
+  "author": "Juan Maria Fernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuuanmaSR/memotest-tarea-clase-10/issues"
+  },
+  "homepage": "https://github.com/JuuanmaSR/memotest-tarea-clase-10#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}
