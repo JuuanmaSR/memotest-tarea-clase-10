@@ -1,0 +1,52 @@
+.cuadro {
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    transition: opacity ease 0.2s;
+  
+  cursor: pointer;
+ 
+}
+
+.fila-juego{
+  height: 18vh;
+}
+
+.columna-juego{
+  border: 1px solid black;
+}
+.color-completo{
+  background-color:darkgrey;
+}
+
+.verdeclaro{
+  background-color: lightgreen;
+}
+
+.rojo{
+  background-color: red;
+}
+
+.salmon{
+  background-color: salmon;
+}
+
+.azul{
+  background-color: blue;
+}
+
+.amarillo{
+  background-color: yellow;
+}
+
+.naranja{
+  background-color: orange;
+}
+
+.violeta{
+  background-color:violet;
+}
+
+.verde{
+  background-color: green ;
+}

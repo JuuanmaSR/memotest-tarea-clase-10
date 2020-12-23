@@ -1,15 +1,104 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Memotest!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='D:\Github-JuanMaria\memotest-tarea-clase-10\node_modules\bootstrap\dist\css\bootstrap.min.css'>
-   
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='D:\Github-JuanMaria\memotest-tarea-clase-10\node_modules\bootstrap\dist\css\bootstrap.min.css'>
+    <link rel="stylesheet" href="main.css">
+
 </head>
+
 <body>
 
+    <div class="container">
+        <div class="row fila-juego">
+            <div class="col shadow-sm p-3 mb-5   alert alert-primary">
+                <p>Presione comenzar para iniciar el juego!</p>
+                <button class="btn btn-primary" type="button" id="comenzar">Comenzar</button>
+            </div>
+            <div class="col shadow-sm p-3 mb-5   alert alert-primary">
+                <p>Tiempo transcurrido:</p>
+                <input type="number" disabled>
+            </div>
+            <div class="col shadow-sm p-3 mb-5   alert alert-primary">
+                <p>Intento Nº:</p>
+
+                <input type="number" disabled >
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="tablero" >
+        <div class="container-sm">
+
+            <div class="row fila-juego">
+                <div class="col columna-juego">
+                    <div class="cuadro "></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+            </div>
+
+            <div class="row fila-juego">
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro rojo"></div>
+                </div>
+            </div>
+
+            <div class="row fila-juego">
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+            </div>
+
+            <div class="row fila-juego">
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+                <div class="col columna-juego">
+                    <div class="cuadro"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -27,6 +116,12 @@
 
 
 
-     <script src="main.js"></script>
+
+
+
+
+
+    <script src="main.js"></script>
 </body>
+
 </html>
