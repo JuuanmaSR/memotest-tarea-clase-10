@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
@@ -13,30 +13,31 @@
 </head>
 
 <body>
+    <div id="button-and-info">
+        <div class="container">
+            <div class="row">
+                <div class="col shadow-sm p-3 mb-5   alert alert-primary">
+                    <p>Presione comenzar para iniciar el juego!</p>
+                    <button class="btn btn-primary" type="button" id="comenzar">Comenzar</button>
+                </div>
+                <div class="col shadow-sm p-3 mb-5   alert alert-primary">
+                    <p>Tiempo transcurrido:</p>
+                    <input type="number" disabled>
+                </div>
+                <div class="col shadow-sm p-3 mb-5   alert alert-primary">
+                    <p>Intento Nº:</p>
 
-    <div class="container">
-        <div class="row fila-juego">
-            <div class="col shadow-sm p-3 mb-5   alert alert-primary">
-                <p>Presione comenzar para iniciar el juego!</p>
-                <button class="btn btn-primary" type="button" id="comenzar">Comenzar</button>
+                    <input type="number" disabled>
+                </div>
             </div>
-            <div class="col shadow-sm p-3 mb-5   alert alert-primary">
-                <p>Tiempo transcurrido:</p>
-                <input type="number" disabled>
-            </div>
-            <div class="col shadow-sm p-3 mb-5   alert alert-primary">
-                <p>Intento Nº:</p>
 
-                <input type="number" disabled >
-            </div>
         </div>
-
     </div>
 
 
 
-    <div id="tablero" >
-        <div class="container-sm">
+    <div id="tablero">
+        <div class="container">
 
             <div class="row fila-juego">
                 <div class="col columna-juego">
@@ -64,7 +65,7 @@
                     <div class="cuadro"></div>
                 </div>
                 <div class="col columna-juego">
-                    <div class="cuadro rojo"></div>
+                    <div class="cuadro"></div>
                 </div>
             </div>
 
