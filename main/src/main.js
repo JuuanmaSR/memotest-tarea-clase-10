@@ -9,3 +9,13 @@ function configurarJuego() {
     configurarCuadros($cuadros, coloresRepetidos);
 
 };
+
+function configurarCuadros($cuadros, colores) {
+    const coloresRandom = colores.sort(function () {
+        return 0.5 - Math.random();
+    });
+
+    coloresRandom.forEach(function (color, i) {
+        $cuadros[i].classList.add(color);
+    });
+};
