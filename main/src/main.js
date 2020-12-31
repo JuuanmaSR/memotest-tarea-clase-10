@@ -60,9 +60,19 @@ function manejarClickCuadro($cuadroActual) {
         $primerCuadro = null;
     };
 };
+
+
 function mostrarCuadro($cuadro) {
     $cuadro.style.opacity = `1`;
 };
+
+function ocultarCuadro($cuadro) {
+    setTimeout(function () {
+        $cuadro.style.opacity = `0`;
+    }, 500);
+
+};
+
 function eliminarCuadro($cuadro) {
     setTimeout(function () {
         $cuadro.parentElement.classList.add(`completo`);
