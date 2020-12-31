@@ -153,6 +153,6 @@ document.querySelector(`#comenzar`).onclick = function () {
 
 };
 
-
+///COMENZANDO CON CYPRESS!////
 
 
