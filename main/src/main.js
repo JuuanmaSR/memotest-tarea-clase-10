@@ -81,4 +81,9 @@ function eliminarCuadro($cuadro) {
     }, 500);
 
 };
+
+function cuadrosSonIguales($cuadro1, $cuadro2) {
+    return $cuadro1.className === $cuadro2.className;
+};
+
 };
