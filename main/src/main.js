@@ -86,4 +86,13 @@ function cuadrosSonIguales($cuadro1, $cuadro2) {
     return $cuadro1.className === $cuadro2.className;
 };
 
+function evaluarFinDelJuego() {
+    if (document.querySelectorAll(`.cuadro`).length === 0) {
+        ocultarTablero();
+        setTimeout(function () {
+            mostrarMensajeFinDeJuego();
+        }, 900);
+
+    };
+};
 };
