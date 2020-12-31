@@ -4,7 +4,7 @@
     width: 100%;
     opacity:0;
     transition: opacity ease 0.2s;
-  
+    
   cursor: pointer;
  
 }
@@ -16,7 +16,7 @@
 .columna-juego{
   border: 1px solid black;
 }
-.color-completo{
+.completo{
   background-color:darkgrey;
 }
 

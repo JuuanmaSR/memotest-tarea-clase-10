@@ -22,21 +22,27 @@
                 </div>
                 <div class="col shadow-sm p-3 mb-5   alert alert-primary">
                     <p>Tiempo transcurrido:</p>
-                    <input type="number" value="0.00" disabled>
+                    <input type="number" id="tiempo" value="0.00" disabled>
                 </div>
                 <div class="col shadow-sm p-3 mb-5   alert alert-primary">
-                    <p>Intento Nº:</p>
+                    <p>Turno Nº:</p>
 
-                    <input type="number" value="0" disabled>
+                    <input id="turnos" type="number" value="0" disabled>
                 </div>
             </div>
 
         </div>
     </div>
+    
+    <h2 id="bienvenida" style="margin-left: 12cm;">Bienvenido al juego del Memotest!</h2>
 
+    <div id="final-juego" class="invisible" style="margin-left: 9cm;">
+        <h3>Realizaste el Memotest en un tiempo de 
+            <strong id="mensaje-tiempo">1.00</strong> y <strong id="mensaje-turnos">25</strong> turnos!
+        </h3>
+    </div>
 
-
-    <div id="tablero">
+    <div id="tablero" class="invisible">
         <div class="container">
 
             <div class="row fila-juego">

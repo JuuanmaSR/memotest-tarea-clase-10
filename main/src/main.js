@@ -1,5 +1,5 @@
-let turnos = 0;
-let tiempo = 0;
+
+let $primerCuadro = null;
 const $tablero = document.querySelector(`#tablero`);
 const $cuadros = $tablero.querySelectorAll(`.cuadro`);
 
@@ -7,7 +7,8 @@ function configurarJuego() {
     const coloresBase = ["verdeclaro", "rojo", "salmon", "azul", "amarillo", "naranja", "violeta", "verde"];
     const coloresRepetidos = coloresBase.concat(coloresBase);
     configurarCuadros($cuadros, coloresRepetidos);
-
+    manejarEventos($tablero);
+    
 };
 
 function configurarCuadros($cuadros, colores) {
@@ -22,14 +23,41 @@ function configurarCuadros($cuadros, colores) {
 
 
 function manejarEventos() {
+
     $tablero.onclick = function (e) {
         const $elemento = e.target;
         if ($elemento.classList.contains(`cuadro`)) {
             manejarClickCuadro($elemento)
         };
     };
+
 };
 
 function manejarClickCuadro($cuadroActual) {
 
+    mostrarCuadro($cuadroActual)
+
+    if ($primerCuadro === null) {
+
+        $primerCuadro = $cuadroActual;
+
+    } else {
+
+        if ($primerCuadro === $cuadroActual) {
+            return;
+        };
+
+        document.querySelector(`#turnos`).value++;
+
+        if (cuadrosSonIguales($primerCuadro, $cuadroActual)) {
+            eliminarCuadro($primerCuadro);
+            eliminarCuadro($cuadroActual);
+        } else {
+            ocultarCuadro($primerCuadro);
+            ocultarCuadro($cuadroActual);
+        };
+
+        $primerCuadro = null;
+    };
+};
 };
