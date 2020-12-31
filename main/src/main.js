@@ -149,6 +149,7 @@ document.querySelector(`#comenzar`).onclick = function () {
     configurarJuego();
     mostrarTablero();
     ocultarBotonComenzar();
+    iniciarTemporizador();
 
 };
 
