@@ -60,4 +60,12 @@ function manejarClickCuadro($cuadroActual) {
         $primerCuadro = null;
     };
 };
+function eliminarCuadro($cuadro) {
+    setTimeout(function () {
+        $cuadro.parentElement.classList.add(`completo`);
+        $cuadro.remove();
+        evaluarFinDelJuego();
+    }, 500);
+
+};
 };
