@@ -95,4 +95,41 @@ function evaluarFinDelJuego() {
 
     };
 };
+
+function mostrarTablero() {
+    $tablero.className = `visible`;
+    document.querySelector(`#bienvenida`).remove();
 };
+
+function ocultarTablero() {
+    setTimeout(function () {
+        $tablero.classList.add(`invisible`)
+    }, 600);
+};
+
+function mostrarMensajeFinDeJuego() {
+    let $turnos = document.querySelector(`#turnos`).value;
+    let turnos = document.querySelector(`#mensaje-turnos`);
+    turnos.textContent = $turnos;
+    document.querySelector(`#final-juego`).className = `visible`;
+};
+
+
+
+
+
+
+
+
+
+document.querySelector(`#comenzar`).onclick = function () {
+
+    configurarJuego();
+    mostrarTablero();
+
+
+};
+
+
+
+
