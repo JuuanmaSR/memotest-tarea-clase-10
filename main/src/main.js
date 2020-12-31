@@ -1,4 +1,3 @@
-
 let $primerCuadro = null;
 const $tablero = document.querySelector(`#tablero`);
 const $cuadros = $tablero.querySelectorAll(`.cuadro`);
@@ -8,7 +7,7 @@ function configurarJuego() {
     const coloresRepetidos = coloresBase.concat(coloresBase);
     configurarCuadros($cuadros, coloresRepetidos);
     manejarEventos($tablero);
-    
+
 };
 
 function configurarCuadros($cuadros, colores) {
@@ -107,6 +106,11 @@ function ocultarTablero() {
     }, 600);
 };
 
+function ocultarBotonComenzar() {
+    let $botonComenzar = document.querySelector(`#comenzar`);
+    $botonComenzar.className = `invisible`;
+};
+
 function mostrarMensajeFinDeJuego() {
     let $turnos = document.querySelector(`#turnos`).value;
     let turnos = document.querySelector(`#mensaje-turnos`);
@@ -126,7 +130,7 @@ document.querySelector(`#comenzar`).onclick = function () {
 
     configurarJuego();
     mostrarTablero();
-
+    ocultarBotonComenzar();
 
 };
 
