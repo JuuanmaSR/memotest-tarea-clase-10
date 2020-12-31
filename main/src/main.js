@@ -1,3 +1,4 @@
+let tiempo = 0;
 let $primerCuadro = null;
 const $tablero = document.querySelector(`#tablero`);
 const $cuadros = $tablero.querySelectorAll(`.cuadro`);
@@ -115,11 +116,28 @@ function mostrarMensajeFinDeJuego() {
     let $turnos = document.querySelector(`#turnos`).value;
     let turnos = document.querySelector(`#mensaje-turnos`);
     turnos.textContent = $turnos;
+    let mensajeTiempo = document.querySelector(`#mensaje-tiempo`)
+    mensajeTiempo.textContent = tiempo;
     document.querySelector(`#final-juego`).className = `visible`;
 };
 
 
+function iniciarTemporizador() {
 
+    let temporizador = document.querySelector(`#tiempo`);
+    let $tiempo = 0;
+
+    let intervalo = setInterval(() => {
+        $tiempo += 0.01;
+        temporizador.value = $tiempo.toFixed(2);
+        tiempo = $tiempo.toFixed(2);
+        if (document.querySelectorAll(`.cuadro`).length === 0) {
+            clearInterval(intervalo);
+        };
+    }, 1000);
+
+
+}
 
 
 
