@@ -60,6 +60,9 @@ function manejarClickCuadro($cuadroActual) {
         $primerCuadro = null;
     };
 };
+function mostrarCuadro($cuadro) {
+    $cuadro.style.opacity = `1`;
+};
 function eliminarCuadro($cuadro) {
     setTimeout(function () {
         $cuadro.parentElement.classList.add(`completo`);
