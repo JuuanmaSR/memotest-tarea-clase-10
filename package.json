@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/JuuanmaSR/memotest-tarea-clase-10#readme",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "http-server": "^0.12.3"
   },
   "devDependencies": {
     "cypress": "^6.2.1"
