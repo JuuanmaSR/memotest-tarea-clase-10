@@ -4,7 +4,12 @@
   "description": "Tarea clase 10, hacer un memotest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "empezar": "http-server",
+    "cypress-run": "cypress run",
+    "cypress-dev": "cypress open",
+    "test-cypress": "run-p start cypress-run",
+    "test-dev": "run-p start cypress-dev"
   },
   "repository": {
     "type": "git",
@@ -17,7 +22,8 @@
   },
   "homepage": "https://github.com/JuuanmaSR/memotest-tarea-clase-10#readme",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "http-server": "^0.12.3"
   },
   "devDependencies": {
     "cypress": "^6.2.1"
