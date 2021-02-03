@@ -1,4 +1,4 @@
-const URLMEMOTEST = `http://192.168.1.5:8084`;
+const URLMEMOTEST = `http://192.168.1.5:8080`;
 
 context(`memotest`, () => {
     before(() => {
@@ -39,9 +39,55 @@ context(`memotest`, () => {
             });
         });
         describe(`jugar al memotest`, () => {
-            
+            let mapaDePares, listaDePares;
+            it('elige una combinacion incorrecta', () => {
+                cy.get(`#comenzar`).click();
+
+                cy.get(`.cuadro`).then((cuadros) => {
+                    mapaDePares = obtenerParesDeCuadros(cuadros);
+                    listaDePares = Object.values(mapaDePares);
+
+                    console.log(listaDePares);
+                    cy.get(listaDePares[0][0]).click();
+                    cy.get(listaDePares[1][0]).click();
+
+                    cy.get(`.cuadro`).should(`have.length`, NUMEROS_CUADROS);
+                });
+            });
+            it('elige combinacion correcta', () => {
+               
+
+                cy.get(`.cuadro`).should(`have.length`, NUMEROS_CUADROS);
+
+                listaDePares.forEach((par) => {
+                    cy.get(par[0]).click();
+                    cy.get(par[1]).click();
+                });
+
+                cy.get(`.cuadro`).should(`have.length`, 0);
+
+                cy.get(`#tablero`).should(`not.be.visible`);
+                
+                cy.get(`#final-juego`).should(`be.visible`);
+            });
         });
     });
 
 
 });
+
+function obtenerParesDeCuadros(cuadros) {
+    const pares = [];
+
+    cuadros.each((i, cuadro) => {
+        const claseColor = cuadro.className.replace(`cuadro`, ``);
+        if (pares[claseColor]) {
+            pares[claseColor].push(cuadro);
+        } else {
+            pares[claseColor] = [cuadro];
+        };
+    });
+
+    console.log(pares)
+    return pares;
+};
